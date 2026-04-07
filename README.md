@@ -147,7 +147,7 @@ This repo is intentionally runnable in local development without external infras
 - Sample data
 - Automated tests
 
-## Suggested resume bullets
+## Progress 
 
 See [`docs/resume_bullets.md`](docs/resume_bullets.md).
 
