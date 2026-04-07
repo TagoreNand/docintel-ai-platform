@@ -1,0 +1,16 @@
+Invoice Number: INV-1024
+Invoice Date: 2026-04-01
+Due Date: 2026-04-20
+Vendor: Nova Industrial Supplies
+PO Number: PO-7731
+Bill To: Aurora Manufacturing
+
+Line Items
+- Industrial bearings, Qty 10, Unit Price 75.00, Line Total 750.00
+- Safety valves, Qty 5, Unit Price 100.00, Line Total 500.00
+
+Subtotal: 1250.00
+Tax: 125.00
+Total Amount: 1375.00
+
+Please remit payment within 20 days.
