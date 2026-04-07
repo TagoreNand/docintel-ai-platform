@@ -1,4 +1,4 @@
-# Resume-ready bullets
+# Key Points
 
 - Architected and built a production-inspired document intelligence platform using FastAPI, SQLAlchemy, React, and a modular ML pipeline for ingestion, classification, extraction, search, anomaly scoring, and human review.
 - Designed a hybrid retrieval stack that combines TF-IDF semantic approximation, keyword overlap, and entity grounding to answer enterprise document questions with ranked evidence.
