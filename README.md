@@ -7,7 +7,7 @@
 ![ML](https://img.shields.io/badge/ML-hybrid%20document%20intelligence-purple)
 ![License](https://img.shields.io/badge/license-MIT-black)
 
-A senior-level, production-inspired AI/ML project for enterprise document intelligence. The platform ingests documents, classifies them, extracts structured fields, indexes semantic chunks, supports grounded question answering, scores anomalies, and routes low-confidence outputs to human review.
+A high-level, production-inspired AI/ML project for enterprise document intelligence. The platform ingests documents, classifies them, extracts structured fields, indexes semantic chunks, supports grounded question answering, scores anomalies, and routes low-confidence outputs to human review.
 
 ## Why this project stands out
 
