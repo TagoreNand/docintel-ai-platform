@@ -11,7 +11,7 @@ A senior-level, production-inspired AI/ML project for enterprise document intell
 
 ## Why this project stands out
 
-This is not a toy “upload PDF and chat” demo. It includes:
+
 
 - **Document ingestion and parsing** for TXT, MD, JSON, CSV, and PDF
 - **Hybrid document classification** (rule-weighted ML-friendly architecture)
@@ -114,9 +114,7 @@ pytest -q
 | `/api/v1/review/tasks/{id}/resolve` | POST | Resolve a task |
 | `/api/v1/analytics/overview` | GET | Operational metrics |
 
-## Senior-engineer discussion points
-
-You can confidently discuss this project in interviews from multiple angles:
+## Discussion points
 
 - **ML systems design**: modular pipeline with clean service boundaries
 - **Reliability**: confidence thresholds and human review routing
