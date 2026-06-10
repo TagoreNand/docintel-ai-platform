@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1640 1210" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#475569"/>
+    </marker>
+    <marker id="arrowd" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#9333ea"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1640" height="1210" fill="#ffffff"/>
+  <text x="820" y="44" text-anchor="middle" font-size="30" font-weight="700" fill="#0f172a">DocIntel AI Platform — Integrated System Architecture (v3.0)</text>
+  <text x="820" y="74" text-anchor="middle" font-size="15" fill="#475569">Hybrid retrieval · calibrated ML classification · unsupervised anomaly detection · OCR · multi-tenant · event-driven · observable · MLOps</text>
+
+  <!-- CLIENTS -->
+  <rect x="40" y="96" width="1560" height="86" rx="10" fill="#f8fafc" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+  <text x="56" y="118" font-size="14" font-weight="700" fill="#64748b">CLIENTS</text>
+  <rect x="70" y="124" width="360" height="46" rx="8" fill="#dbeafe" stroke="#60a5fa"/>
+  <text x="250" y="146" text-anchor="middle" font-size="14" font-weight="600" fill="#0f172a">React Operations Console</text>
+  <text x="250" y="162" text-anchor="middle" font-size="11" fill="#475569">upload · search · review · analytics</text>
+  <rect x="450" y="124" width="430" height="46" rx="8" fill="#dbeafe" stroke="#60a5fa"/>
+  <text x="665" y="146" text-anchor="middle" font-size="14" font-weight="600" fill="#0f172a">REST clients / Postman / SDK</text>
+  <text x="665" y="162" text-anchor="middle" font-size="11" fill="#475569">X-API-Key or Bearer JWT (multi-tenant)</text>
+  <text x="1300" y="150" text-anchor="middle" font-size="12" fill="#94a3b8">OpenAPI · /docs · Swagger UI</text>
+
+  <!-- GATEWAY -->
+  <rect x="40" y="206" width="1560" height="96" rx="10" fill="#eef2ff" stroke="#818cf8" stroke-dasharray="4 4"/>
+  <text x="56" y="228" font-size="14" font-weight="700" fill="#6366f1">API GATEWAY · FastAPI</text>
+  <rect x="70" y="236" width="320" height="52" rx="8" fill="#e0e7ff" stroke="#818cf8"/>
+  <text x="230" y="258" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Auth + Tenant resolve</text>
+  <text x="230" y="275" text-anchor="middle" font-size="11" fill="#475569">API-key / JWT → tenant_id</text>
+  <rect x="410" y="236" width="250" height="52" rx="8" fill="#e0e7ff" stroke="#818cf8"/>
+  <text x="535" y="258" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Request-ID + access log</text>
+  <text x="535" y="275" text-anchor="middle" font-size="11" fill="#475569">structured JSON logging</text>
+  <rect x="680" y="236" width="230" height="52" rx="8" fill="#e0e7ff" stroke="#818cf8"/>
+  <text x="795" y="258" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Prometheus metrics</text>
+  <text x="795" y="275" text-anchor="middle" font-size="11" fill="#475569">RED + histograms</text>
+  <rect x="930" y="236" width="646" height="52" rx="8" fill="#e0e7ff" stroke="#818cf8"/>
+  <text x="1253" y="258" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Routers</text>
+  <text x="1253" y="275" text-anchor="middle" font-size="11" fill="#475569">/documents · /search · /review · /analytics · /system · /events · /metrics</text>
+
+  <!-- INGESTION -->
+  <rect x="40" y="326" width="760" height="386" rx="10" fill="#fff7ed" stroke="#fb923c" stroke-dasharray="4 4"/>
+  <text x="56" y="348" font-size="14" font-weight="700" fill="#ea580c">INGESTION PIPELINE</text>
+  <rect x="64" y="358" width="320" height="44" rx="8" fill="#ffedd5" stroke="#fb923c"/>
+  <text x="224" y="385" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Parse + OCR (Tesseract → Donut*)</text>
+  <rect x="64" y="412" width="320" height="44" rx="8" fill="#ffedd5" stroke="#fb923c"/>
+  <text x="224" y="439" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Classify · TF-IDF+LogReg ⊕ rules</text>
+  <rect x="64" y="466" width="320" height="44" rx="8" fill="#ffedd5" stroke="#fb923c"/>
+  <text x="224" y="493" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Extract entities (regex)</text>
+  <rect x="64" y="520" width="320" height="44" rx="8" fill="#ffedd5" stroke="#fb923c"/>
+  <text x="224" y="547" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Chunk text</text>
+  <rect x="64" y="574" width="320" height="44" rx="8" fill="#ffedd5" stroke="#fb923c"/>
+  <text x="224" y="601" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Embed · MiniLM / hashing (GPU-aware)</text>
+  <rect x="64" y="628" width="320" height="44" rx="8" fill="#ffedd5" stroke="#fb923c"/>
+  <text x="224" y="655" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Index → vector store</text>
+  <!-- anomaly + review -->
+  <rect x="420" y="412" width="356" height="70" rx="8" fill="#fee2e2" stroke="#f87171"/>
+  <text x="598" y="440" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Anomaly scoring</text>
+  <text x="598" y="458" text-anchor="middle" font-size="11" fill="#475569">business rules ⊕ IsolationForest</text>
+  <text x="598" y="472" text-anchor="middle" font-size="11" fill="#475569">→ score + explainable reasons</text>
+  <rect x="420" y="520" width="356" height="98" rx="8" fill="#dcfce7" stroke="#4ade80"/>
+  <text x="598" y="548" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Decision &amp; Review routing</text>
+  <text x="598" y="567" text-anchor="middle" font-size="11" fill="#475569">conf ≥ 0.92 &amp; low risk → auto-approve</text>
+  <text x="598" y="583" text-anchor="middle" font-size="11" fill="#475569">low conf / high anomaly → human review</text>
+  <text x="598" y="603" text-anchor="middle" font-size="11" fill="#475569">priority = f(anomaly_score)</text>
+  <!-- vertical arrows -->
+  <line x1="224" y1="402" x2="224" y2="412" stroke="#475569" marker-end="url(#arrow)"/>
+  <line x1="224" y1="456" x2="224" y2="466" stroke="#475569" marker-end="url(#arrow)"/>
+  <line x1="224" y1="510" x2="224" y2="520" stroke="#475569" marker-end="url(#arrow)"/>
+  <line x1="224" y1="564" x2="224" y2="574" stroke="#475569" marker-end="url(#arrow)"/>
+  <line x1="224" y1="618" x2="224" y2="628" stroke="#475569" marker-end="url(#arrow)"/>
+  <line x1="384" y1="447" x2="420" y2="447" stroke="#475569" marker-end="url(#arrow)"/>
+  <line x1="598" y1="482" x2="598" y2="520" stroke="#475569" marker-end="url(#arrow)"/>
+
+  <!-- RETRIEVAL -->
+  <rect x="820" y="326" width="780" height="386" rx="10" fill="#f5f3ff" stroke="#a78bfa" stroke-dasharray="4 4"/>
+  <text x="836" y="348" font-size="14" font-weight="700" fill="#7c3aed">HYBRID RETRIEVAL &amp; GROUNDED QA</text>
+  <rect x="1160" y="360" width="300" height="42" rx="8" fill="#ede9fe" stroke="#a78bfa"/>
+  <text x="1310" y="386" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Query (tenant-scoped)</text>
+  <rect x="860" y="430" width="320" height="64" rx="8" fill="#ede9fe" stroke="#a78bfa"/>
+  <text x="1020" y="456" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Dense recall</text>
+  <text x="1020" y="474" text-anchor="middle" font-size="11" fill="#475569">neural embeddings · cosine</text>
+  <rect x="1240" y="430" width="320" height="64" rx="8" fill="#ede9fe" stroke="#a78bfa"/>
+  <text x="1400" y="456" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Sparse recall</text>
+  <text x="1400" y="474" text-anchor="middle" font-size="11" fill="#475569">hand-rolled BM25 Okapi</text>
+  <rect x="1060" y="520" width="440" height="44" rx="8" fill="#ddd6fe" stroke="#8b5cf6"/>
+  <text x="1280" y="547" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">Reciprocal Rank Fusion</text>
+  <rect x="1060" y="576" width="440" height="42" rx="8" fill="#ede9fe" stroke="#a78bfa"/>
+  <text x="1280" y="602" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Cross-encoder rerank (optional)</text>
+  <rect x="1010" y="632" width="540" height="58" rx="8" fill="#ddd6fe" stroke="#8b5cf6"/>
+  <text x="1280" y="657" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">Extractive grounded answer + ranked evidence</text>
+  <text x="1280" y="675" text-anchor="middle" font-size="11" fill="#475569">best sentences cited to the source document</text>
+  <line x1="1280" y1="402" x2="1100" y2="430" stroke="#9333ea" marker-end="url(#arrowd)"/>
+  <line x1="1280" y1="402" x2="1400" y2="430" stroke="#9333ea" marker-end="url(#arrowd)"/>
+  <line x1="1020" y1="494" x2="1230" y2="520" stroke="#9333ea" marker-end="url(#arrowd)"/>
+  <line x1="1400" y1="494" x2="1330" y2="520" stroke="#9333ea" marker-end="url(#arrowd)"/>
+  <line x1="1280" y1="564" x2="1280" y2="576" stroke="#9333ea" marker-end="url(#arrowd)"/>
+  <line x1="1280" y1="618" x2="1280" y2="632" stroke="#9333ea" marker-end="url(#arrowd)"/>
+
+  <!-- gateway to pipeline/retrieval -->
+  <line x1="300" y1="302" x2="300" y2="326" stroke="#475569" marker-end="url(#arrow)"/>
+  <line x1="1253" y1="302" x2="1253" y2="326" stroke="#475569" marker-end="url(#arrow)"/>
+  <line x1="250" y1="170" x2="250" y2="206" stroke="#475569" marker-end="url(#arrow)"/>
+  <line x1="665" y1="170" x2="665" y2="206" stroke="#475569" marker-end="url(#arrow)"/>
+
+  <!-- PERSISTENCE -->
+  <rect x="40" y="730" width="1560" height="120" rx="10" fill="#f0fdfa" stroke="#2dd4bf" stroke-dasharray="4 4"/>
+  <text x="56" y="752" font-size="14" font-weight="700" fill="#0d9488">PERSISTENCE</text>
+  <rect x="64" y="760" width="470" height="74" rx="8" fill="#ccfbf1" stroke="#2dd4bf"/>
+  <text x="299" y="786" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Relational DB · Postgres / SQLite</text>
+  <text x="299" y="804" text-anchor="middle" font-size="11" fill="#475569">documents (tenant_id) · entities</text>
+  <text x="299" y="820" text-anchor="middle" font-size="11" fill="#475569">chunks · review_tasks</text>
+  <rect x="558" y="760" width="520" height="74" rx="8" fill="#ccfbf1" stroke="#2dd4bf"/>
+  <text x="818" y="786" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Per-tenant Vector Store</text>
+  <text x="818" y="804" text-anchor="middle" font-size="11" fill="#475569">Qdrant (HNSW + scalar quantization)</text>
+  <text x="818" y="820" text-anchor="middle" font-size="11" fill="#475569">or local numpy store (offline)</text>
+  <rect x="1102" y="760" width="474" height="74" rx="8" fill="#ccfbf1" stroke="#2dd4bf"/>
+  <text x="1339" y="786" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Model artifacts · data/models</text>
+  <text x="1339" y="804" text-anchor="middle" font-size="11" fill="#475569">classifier + IForest + cards</text>
+  <text x="1339" y="820" text-anchor="middle" font-size="11" fill="#475569">drift baseline · feedback.jsonl</text>
+  <line x1="224" y1="672" x2="224" y2="760" stroke="#475569" marker-end="url(#arrow)"/>
+  <text x="236" y="715" font-size="10" fill="#64748b">write</text>
+  <line x1="818" y1="760" x2="1020" y2="494" stroke="#0d9488" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+  <text x="900" y="640" font-size="10" fill="#0d9488">vectors</text>
+
+  <!-- PLATFORM ROW -->
+  <!-- Events -->
+  <rect x="40" y="868" width="500" height="232" rx="10" fill="#ecfeff" stroke="#22d3ee" stroke-dasharray="4 4"/>
+  <text x="56" y="890" font-size="14" font-weight="700" fill="#0891b2">EVENT STREAMING &amp; SCALE</text>
+  <rect x="64" y="900" width="452" height="46" rx="8" fill="#cffafe" stroke="#22d3ee"/>
+  <text x="290" y="922" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Kafka topics</text>
+  <text x="290" y="938" text-anchor="middle" font-size="11" fill="#475569">document.uploaded/processed/needs_review · review.resolved</text>
+  <rect x="64" y="958" width="452" height="46" rx="8" fill="#cffafe" stroke="#22d3ee"/>
+  <text x="290" y="980" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Distributed worker</text>
+  <text x="290" y="996" text-anchor="middle" font-size="11" fill="#475569">consumes document.uploaded → runs pipeline</text>
+  <rect x="64" y="1016" width="452" height="40" rx="8" fill="#f0f9ff" stroke="#7dd3fc"/>
+  <text x="290" y="1041" text-anchor="middle" font-size="11" fill="#475569">fallback: in-memory bus · in-process ingestion</text>
+
+  <!-- MLOps -->
+  <rect x="560" y="868" width="560" height="232" rx="10" fill="#fdf2f8" stroke="#f472b6" stroke-dasharray="4 4"/>
+  <text x="576" y="890" font-size="14" font-weight="700" fill="#db2777">MLOps &amp; CONTINUAL LEARNING</text>
+  <rect x="584" y="900" width="512" height="46" rx="8" fill="#fce7f3" stroke="#f472b6"/>
+  <text x="840" y="922" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Train → MLflow registry → CI quality gate</text>
+  <text x="840" y="938" text-anchor="middle" font-size="11" fill="#475569">block merge if accuracy / macro-F1 regress</text>
+  <rect x="584" y="958" width="512" height="46" rx="8" fill="#fce7f3" stroke="#f472b6"/>
+  <text x="840" y="980" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Drift monitoring · /analytics/drift</text>
+  <text x="840" y="996" text-anchor="middle" font-size="11" fill="#475569">PSI (doc-type / confidence) + embedding-centroid drift</text>
+  <rect x="584" y="1016" width="512" height="40" rx="8" fill="#fce7f3" stroke="#f472b6"/>
+  <text x="840" y="1041" text-anchor="middle" font-size="11" fill="#475569">reviewer corrections → feedback → retrain loop</text>
+
+  <!-- Observability -->
+  <rect x="1140" y="868" width="460" height="232" rx="10" fill="#f8fafc" stroke="#94a3b8" stroke-dasharray="4 4"/>
+  <text x="1156" y="890" font-size="14" font-weight="700" fill="#475569">OBSERVABILITY</text>
+  <rect x="1164" y="900" width="412" height="46" rx="8" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="1370" y="922" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Prometheus → Grafana</text>
+  <text x="1370" y="938" text-anchor="middle" font-size="11" fill="#475569">scrape /metrics · dashboards</text>
+  <rect x="1164" y="958" width="412" height="46" rx="8" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="1370" y="980" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">OpenTelemetry traces (optional)</text>
+  <text x="1370" y="996" text-anchor="middle" font-size="11" fill="#475569">OTLP exporter</text>
+  <rect x="1164" y="1016" width="412" height="40" rx="8" fill="#e2e8f0" stroke="#94a3b8"/>
+  <text x="1370" y="1041" text-anchor="middle" font-size="11" fill="#475569">/system/info · live backend status</text>
+
+  <!-- platform connecting arrows -->
+  <line x1="598" y1="618" x2="598" y2="760" stroke="#475569" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+  <text x="610" y="700" font-size="10" fill="#64748b">review_tasks</text>
+  <line x1="640" y1="958" x2="540" y2="980" stroke="#94a3b8" stroke-dasharray="5 4"/>
+  <line x1="1339" y1="834" x2="840" y2="958" stroke="#db2777" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+  <line x1="290" y1="946" x2="290" y2="958" stroke="#0891b2" marker-end="url(#arrow)"/>
+
+  <!-- FOOTER -->
+  <rect x="40" y="1120" width="1560" height="60" rx="10" fill="#0f172a"/>
+  <text x="820" y="1146" text-anchor="middle" font-size="14" font-weight="700" fill="#f8fafc">Fallback-first design</text>
+  <text x="820" y="1167" text-anchor="middle" font-size="12" fill="#cbd5e1">Every external dependency — neural embeddings · GPU · Qdrant · Kafka · MLflow · OCR · OpenTelemetry — auto-detects and degrades gracefully. The platform runs fully offline.</text>
+  <text x="1500" y="360" font-size="10" fill="#94a3b8">* Donut/LayoutLM optional</text>
+</svg>

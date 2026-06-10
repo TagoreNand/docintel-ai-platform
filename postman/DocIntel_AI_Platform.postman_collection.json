@@ -1,0 +1,125 @@
+{
+  "info": {
+    "name": "DocIntel AI Platform",
+    "_postman_id": "91c2be9a-fd29-4c98-b6b3-22b6d74a860b",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Senior-level enterprise document intelligence API collection."
+  },
+  "item": [
+    {
+      "name": "Health",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/health",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "health"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Ingest Sample Documents",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/documents/ingest-sample",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "documents",
+            "ingest-sample"
+          ]
+        }
+      }
+    },
+    {
+      "name": "List Documents",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/documents",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "documents"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Search Query",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"question\": \"Which invoice mentions Nova Industrial Supplies?\",\n  \"top_k\": 5\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/search/query",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "search",
+            "query"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Review Tasks",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/review/tasks",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "review",
+            "tasks"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Analytics Overview",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/analytics/overview",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "analytics",
+            "overview"
+          ]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8000/api/v1"
+    }
+  ]
+}

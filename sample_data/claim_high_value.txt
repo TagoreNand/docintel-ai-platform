@@ -1,0 +1,11 @@
+Insurance Claim Intake Form
+
+Claim ID: CLM-4458
+Claimant: Priya Narayanan
+Policy Number: PLC-90033
+Incident Date: 2026-03-28
+Adjuster: Marcus Bell
+Loss Description: Water damage resulting from a burst industrial cooling pipe.
+Amount Claimed: 78000.00
+
+The claimant reports equipment downtime and remediation costs across two warehouse zones.

@@ -1,0 +1,50 @@
+# ----- API & core -----
+fastapi==0.116.1
+uvicorn[standard]==0.35.0
+sqlalchemy==2.0.43
+# Postgres driver (used by docker-compose; local SQLite needs no driver)
+psycopg2-binary==2.9.9
+pydantic==2.11.7
+pydantic-settings==2.10.1
+python-multipart==0.0.20
+httpx==0.28.1
+python-dotenv==1.1.1
+
+# ----- Data & classical ML -----
+numpy==2.3.2
+pandas==2.3.2
+scikit-learn==1.7.1
+joblib==1.5.1
+
+# ----- Document parsing & OCR -----
+# OCR also needs system binaries: tesseract-ocr + poppler-utils (see Dockerfile).
+pypdf==6.0.0
+pytesseract==0.3.13
+pdf2image==1.17.0
+Pillow==10.4.0
+
+# ----- Semantic retrieval (neural embeddings + cross-encoder reranker) -----
+# Optional at runtime: falls back to a deterministic hashing embedder and skips
+# reranking when these / their weights / a GPU are unavailable.
+sentence-transformers==3.1.1
+
+# ----- Vector store (optional; local numpy store used when unreachable) -----
+qdrant-client==1.11.3
+
+# ----- Auth / multi-tenancy -----
+PyJWT==2.9.0
+
+# ----- Event streaming (optional; in-memory bus used when Kafka is down) -----
+kafka-python-ng==2.2.3
+
+# ----- Experiment tracking (optional; no-op when ENABLE_MLFLOW=false) -----
+mlflow==2.22.1
+
+# ----- Observability: Prometheus metrics + optional OpenTelemetry tracing -----
+prometheus-client==0.21.0
+opentelemetry-sdk==1.27.0
+opentelemetry-exporter-otlp-proto-grpc==1.27.0
+opentelemetry-instrumentation-fastapi==0.48b0
+
+# ----- Testing -----
+pytest==8.4.1

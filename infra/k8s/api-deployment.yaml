@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: docintel-api
+  namespace: docintel
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: docintel-api
+  template:
+    metadata:
+      labels:
+        app: docintel-api
+    spec:
+      containers:
+        - name: api
+          image: your-registry/docintel-api:latest
+          ports:
+            - containerPort: 8000
+          env:
+            - name: DATABASE_URL
+              value: postgresql+psycopg2://docintel:docintel@postgres:5432/docintel
+            - name: ALLOWED_ORIGINS
+              value: http://docintel-web
+          readinessProbe:
+            httpGet:
+              path: /api/v1/ready
+              port: 8000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: docintel-api
+  namespace: docintel
+spec:
+  selector:
+    app: docintel-api
+  ports:
+    - port: 80
+      targetPort: 8000

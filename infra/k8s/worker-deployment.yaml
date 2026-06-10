@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: docintel-worker
+  namespace: docintel
+  labels:
+    app: docintel-worker
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: docintel-worker
+  template:
+    metadata:
+      labels:
+        app: docintel-worker
+    spec:
+      containers:
+        - name: worker
+          image: docintel-api:latest
+          command: ["python", "-m", "app.worker"]
+          env:
+            - name: INGESTION_MODE
+              value: "kafka"
+            - name: ENABLE_KAFKA
+              value: "true"
+            - name: KAFKA_BOOTSTRAP_SERVERS
+              value: "kafka:9092"
+            - name: VECTOR_BACKEND
+              value: "qdrant"
+            - name: QDRANT_URL
+              value: "http://qdrant:6333"
+            - name: DATABASE_URL
+              value: "postgresql+psycopg2://docintel:docintel@postgres:5432/docintel"
+          resources:
+            requests:
+              cpu: "250m"
+              memory: "512Mi"
+            limits:
+              cpu: "1"
+              memory: "1Gi"
